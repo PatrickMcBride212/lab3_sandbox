@@ -4,10 +4,10 @@
 int main() {
   char line[500];
   while(1) {
-    if (fgets(line, 500, stdin) == NULL) {
-      exit(0);
-    } else {
+    if (fgets(line, 500, stdin)) {
       printf("%s", line);
+    } else {
+      exit(0);
     }
   }
 }
